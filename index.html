@@ -1,36 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halaman Login</title>
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Custom -->
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
-<body>
-  <div class="login_container">
-    <h2>Hi👋🏼 Ayangg login dulu yuk</h2>
-    <form id="loginForm" class="login_form">
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button type="submit" id="loginBtn">Login</button>
+<body class="bg-gradient-to-br from-green-100 via-white to-blue-100 min-h-screen w-full flex items-center justify-center px-4 sm:px-0 font-[Poppins]">
+
+  <div id="loginBox" class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md opacity-0 scale-90 transition-all duration-500">
+    <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 text-center mb-3 sm:mb-4">
+      alooo 👋🏼 Katherine Anastasya
+    </h2>
+    <p class="text-center text-sm sm:text-base text-gray-500 mb-5 sm:mb-6">
+      Login dulu yuk!
+    </p>
+
+    <form id="loginForm" class="space-y-4 sm:space-y-5">
+      <div>
+        <input type="text" id="username" placeholder="Username"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div>
+        <input type="password" id="password" placeholder="Password"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <button type="submit" id="loginBtn"
+        class="w-full py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-transform duration-300 active:scale-95">
+        Login
+      </button>
     </form>
-    <p class="login_description">
-      pssstttt, usernamenya isi "user" dan passwordnya sama dengan usernamenya ya
+
+    <p class="text-xs sm:text-sm text-gray-400 mt-5 text-center italic">
+      pssstttt... usernamenya isi <strong>"00.00"</strong> dan passwordnya sama ya 😺
     </p>
   </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    // Animasi saat halaman dimuat
+    gsap.to("#loginBox", {
+      duration: 1,
+      opacity: 1,
+      scale: 1,
+      ease: "back.out(1.7)"
+    });
+
+  </script>
+
+  <script src="./scripts/index.js"></script>
 </body>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<!-- SweetAlery -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- Main JS -->
-<script type="application/javascript" src="./scripts/index.js"></script>
 
 </html>

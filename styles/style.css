@@ -360,4 +360,17 @@ button[type="submit"]:hover {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+
+  .profile-picture {
+  margin-top: -20px; /* Naikkan gambar */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-picture {
+  transform: translateY(-20px); /* Naikkan gambar 20px */
+}
+
 }
